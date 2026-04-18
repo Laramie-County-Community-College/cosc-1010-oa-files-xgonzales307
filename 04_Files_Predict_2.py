@@ -12,7 +12,7 @@ Activity: Predict the Output
     Pay close attention to the details, including special characters!
 """
 
-prediction = "" # Example: ["Milk", "Bread", "Eggs"]
+prediction = "it will print a list of strings, where each string is a line from the file, including the newline character at the end of each line. The output will look like this:"
 
 # This code assumes "shopping.txt" exists with the content described above.
 file = open("shopping.txt", "r")

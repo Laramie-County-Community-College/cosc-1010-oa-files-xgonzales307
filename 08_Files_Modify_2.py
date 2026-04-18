@@ -17,12 +17,22 @@ filename = input("Enter the filename to read: ")
 # --- MODIFY THE CODE BELOW ---
 # Add a try...except block to handle a FileNotFoundError
 
-file = open(filename, "r")
-content = file.read()
-file.close()
+try:
+    # Attempt to open and read the file
+    file = open(filename, "r")
+    content = file.read()
+    file.close()
 
-print("\n--- File Content ---")
-print(content)
-print("--------------------")
+    # If successful, print the content
+    print("\n--- File Content ---")
+    print(content)
+    print("--------------------")
+
+except FileNotFoundError:
+    # This block executes only if the filename provided does not exist
+    print(f"\nError: The file '{filename}' could not be found.")
+except Exception as e:
+    # This block catches any other unexpected errors (e.g., permission issues)
+    print(f"\nAn unexpected error occurred: {e}")
 
 # --- END MODIFICATION ---
